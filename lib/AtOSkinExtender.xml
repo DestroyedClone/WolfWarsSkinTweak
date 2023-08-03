@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AtOSkinExtender</name>
+    </assembly>
+    <members>
+        <member name="T:AtOSkinExtender.Assets">
+            <summary>
+            Helpers for making and cataloguing new skins.
+            </summary>
+        </member>
+        <member name="F:AtOSkinExtender.Assets.sku_WolfWars">
+            <summary>
+            The sku for the DLC Wolf Wars
+            </summary>
+        </member>
+        <member name="F:AtOSkinExtender.Assets.sku_Halloween">
+            <summary>
+            The sku for the DLC Halloween
+            </summary>
+        </member>
+        <member name="M:AtOSkinExtender.Assets.GetBaseSkinOrDefaultForSubclass(System.String)">
+            <summary>
+            Returns the first skin found with .BaseSkin set to true. If there's no BaseSkins, then it will return the first skin found. Otherwise, returns null.
+            </summary>
+            <param name="id">SubclassData id</param>
+            <returns></returns>
+        </member>
+        <member name="F:AtOSkinExtender.Assets.skinDataPacks">
+            <summary>
+            List of skin data packs. 
+            </summary>
+        </member>
+        <member name="M:AtOSkinExtender.Assets.GetOrCreateSkinDataListForIdentifier(System.String)">
+            <summary>
+            Creates an associated SkinData list for the assigned identifier, or gets the existed associated SkinData list.
+            </summary>
+            <param name="identifier">The identifier for the SkinData list</param>
+            <returns></returns>
+        </member>
+        <member name="M:AtOSkinExtender.Assets.AddSkinDataToPack(System.Collections.Generic.IEnumerable{SkinData},System.String)">
+            <summary>
+            Adds an IEnumerable of SkinData to the collection
+            </summary>
+            <param name="skinDataCollection">Collection of SkinData's to add to the pack</param>
+            <param name="identifier">SkinData List identifier</param>
+        </member>
+        <member name="M:AtOSkinExtender.Assets.AddSkinDataToPack(SkinData,System.String)">
+            <summary>
+            Adds a SkinData to the collection
+            </summary>
+            <param name="skinData">SkinData to add to the pack</param>
+            <param name="identifier">SkinData List identifier</param>
+        </member>
+        <member name="M:AtOSkinExtender.Assets.GetIdentiferForSkin(SkinData)">
+            <summary>
+            Returns the associated identifier for a SkinData
+            </summary>
+            <param name="skinData">SkinData that you want the identifier of.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AtOSkinExtender.Assets.CreateSkinData(System.String,System.String,System.Int32,UnityEngine.Sprite,UnityEngine.Sprite,UnityEngine.Sprite,UnityEngine.Sprite,UnityEngine.GameObject,System.String)">
+            <summary>
+            Creates and returns a SkinData instance.
+            </summary>
+            <param name="subclassId">"ranger"<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=17158299">Reference: SubclassData (Google Sheets)</see></br></param>
+            <param name="skinName">"Voodoo Witch"<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <param name="perkLevel">Set to 0 for no perk level requirement.<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <param name="portrait"></param>
+            <param name="portraitLarge"></param>
+            <param name="silueta">silhouette</param>
+            <param name="siluetaLarge">silhouette large</param>
+            <param name="skinGO">The display gameObject for the skin in combat.<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <param name="Sku">Required DLC<br>Wolfwars(2325780) | Halloween(2168960)</br><br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtOSkinExtender.Assets.CreateSkinData(System.String,System.String,System.String,System.Int32,UnityEngine.Sprite,UnityEngine.Sprite,UnityEngine.Sprite,UnityEngine.Sprite,UnityEngine.GameObject,System.String)">
+            <summary>
+            Creates and returns a SkinData instance.
+            </summary>
+            <param name="subclassId">"ranger"<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=17158299">Reference: SubclassData (Google Sheets)</see></br></param>
+            <param name="skinName">"Voodoo Witch"<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <param name="skinId">andrinSkinRegular<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <param name="perkLevel">Set to 0 for no perk level requirement.<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <param name="portrait"></param>
+            <param name="portraitLarge"></param>
+            <param name="silueta">silhouette</param>
+            <param name="siluetaLarge">silhouette large</param>
+            <param name="skinGO">The display gameObject for the skin in combat.<br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <param name="Sku">Required DLC<br>Wolfwars(2325780) | Halloween(2168960)</br><br><see href="https://docs.google.com/spreadsheets/d/1CokEi8RY33KTwKccprNvr4nnRk2y-HQGUZC_YB9exzo/edit#gid=1568095750">Reference: SkinData (Google Sheets)</see></br></param>
+            <returns></returns>
+        </member>
+        <member name="F:AtOSkinExtender.Plugin.skinIdIdentifierReference">
+            <summary>
+            A dictionary containing the "skinId" as the Key, and "mod GUID/Identifier" as the Value.
+            </summary>
+        </member>
+        <member name="F:AtOSkinExtender.Plugin.onCreateSkins">
+            <summary>
+            Action to subscribe to when creating skins to ensure maximum compatibility.
+            </summary>
+        </member>
+        <member name="F:AtOSkinExtender.Plugin.Pre_onCharPopupDoSkins">
+            <summary>
+            Action to replace calls made before event of On.CharPopup.DoSkins's orig call.
+            </summary>
+        </member>
+        <member name="F:AtOSkinExtender.Plugin.Post_onCharPopupDoSkins">
+            <summary>
+            Action to replace calls made after event of On.CharPopup.DoSkins's orig call.
+            </summary>
+        </member>
+        <member name="T:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent">
+            <summary>
+            Component used to control CharPopup's skin menu
+            </summary>
+        </member>
+        <member name="F:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent.Instance">
+            <summary>
+            The instance of the SkinSelectorComponent
+            </summary>
+        </member>
+        <member name="F:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent.charPopup">
+            <summary>
+            The current CharPopup instance, assigned when the component is added.
+            </summary>
+        </member>
+        <member name="M:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent.Awake">
+            <summary>
+            Unity action.
+            </summary>
+        </member>
+        <member name="M:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent.Start">
+            <summary>
+            Unity action.
+            </summary>
+        </member>
+        <member name="M:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent.OnDestroy">
+            <summary>
+            Unity action.
+            </summary>
+        </member>
+        <member name="M:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent.CharPopup_DoSkins(On.CharPopup.orig_DoSkins,CharPopup)">
+            <summary>
+            Override to patch out of range exceptiona and to add scrolling support.
+            </summary>
+        </member>
+        <member name="M:AtOSkinExtender.Modules.SkinSelector.SkinSelectorComponent.Update">
+            <summary>
+            Unity action.
+            </summary>
+        </member>
+    </members>
+</doc>
