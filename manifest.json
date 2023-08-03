@@ -1,10 +1,11 @@
 {
   "name": "WolfWarsSkinTweak",
   "version_number": "0.1.0",
-  "website_url": "https://github.com/DestroyedClone/AtOSkinExtender",
-  "description": "Extends skin support and adds scrolling.",
+  "website_url": "https://github.com/DestroyedClone/WolfWarsSkinTweak",
+  "description": "Adds Charls and Binks as skins, and renames skins.",
   "dependencies": [
     "BepInEx-BepInExPack_AcrossTheObelisk-5.4.21",
-    "HookGenPatcher-HookGenPatcher-1.2.10"
+    "HookGenPatcher-HookGenPatcher-1.2.10",
+    "DestroyedClone-SkinExtender-0.1.1"
   ]
 }
