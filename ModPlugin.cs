@@ -15,17 +15,17 @@ using BepInEx.Configuration;
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-namespace AtOYoungSkins
+namespace WolfWarsSkinTweak
 {
-    [BepInPlugin("com.DestroyedClone.YoungSkins", "Young Skins", "0.1.0")]
+    [BepInPlugin("com.DestroyedClone.WolfWarsSkinTweak", "Wolf Wars Skin Tweak", "0.1.0")]
     [BepInDependency(AtOSkinExtender.Plugin.modGuid)]
     [BepInDependency("com.DestroyedClone.FoeFacade", BepInDependency.DependencyFlags.SoftDependency)]
 
-    public class YSPlugin : BaseUnityPlugin
+    public class ModPlugin : BaseUnityPlugin
     {
         //youngskins cause youngbinks etc
         //past skins? needs to be expandable if theres gonna be new settings
-        public const string identifier = "Young Skins";
+        public const string identifier = "WolfWarsSkinTweak";
         public static List<SkinData> mySkins = new List<SkinData>();
         public static BepInEx.Logging.ManualLogSource _logger;
 
@@ -98,14 +98,14 @@ namespace AtOYoungSkins
 
         private void CreateEnemySkinsForHeroes()
         {
-            CreateRusty();
+            //CreateRusty();
             //add to shooters
             foreach (var subclass in Globals.Instance._SubClassSource)
             {
                 //they dont HAVE skins
                 //var binksSkin = Globals.Instance.GetSkinsBySubclass("youngbinks")[0];
                 //var charlsSkin = Globals.Instance.GetSkinsBySubclass("youngcharls")[0];
-                _logger.LogMessage(subclass.Value.SubClassName);
+                //_logger.LogMessage(subclass.Value.SubClassName);
                 switch (subclass.Value.HeroClass)
                 {
                     case Enums.HeroClass.Warrior:
@@ -137,12 +137,13 @@ namespace AtOYoungSkins
             //Globals.Instance.GetSkinData("ottiswolfwars").SkinName = Texts.Instance.GetText("wolfWars");
         }
 
-        private void CreateRusty()
+        //would have to do flip code and ehhhhh
+        /*private void CreateRusty()
         {
             if (modloaded_foefacade)
                 return;
             mySkins.Add(CreateSkinFromNPCForSubclass(Globals.Instance.GetNPC("rusty"), Globals.Instance.GetSubClassData("sentinel")));
-        }
+        }*/
 
         private void RegisterSkins()
         {
